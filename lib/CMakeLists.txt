@@ -28,9 +28,9 @@
 add_library(fec SHARED
     #libbertools.cc
     #fec_random_gen_b.cc
-    fec_encoder.cc
+    #fec_encoder.cc
     #fec_gaussnoise_ff.cc
-    fec_decoder.cc
+    #fec_decoder.cc
     #fec_ber_bb.cc
     #fec_interleave.cc
     #fec_deinterleave.cc
