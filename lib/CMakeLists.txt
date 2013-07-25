@@ -26,35 +26,35 @@
     
 
 add_library(fec SHARED
-    libbertools.cc
-    fec_random_gen_b.cc
+    #libbertools.cc
+    #fec_random_gen_b.cc
     fec_encoder.cc
-    fec_gaussnoise_ff.cc
+    #fec_gaussnoise_ff.cc
     fec_decoder.cc
-    fec_ber_bb.cc
-    fec_interleave.cc
-    fec_deinterleave.cc
+    #fec_ber_bb.cc
+    #fec_interleave.cc
+    #fec_deinterleave.cc
     cc_decoder.cc
     generic_decoder.cc
     generic_encoder.cc
     cc_encoder.cc
-    fec_corr_bb.cc
-    fec_reinflate_bb.cc
-    fec_puncture_ff.cc
-    ber_sink_b_impl.cc
+    #fec_corr_bb.cc
+    #fec_reinflate_bb.cc
+    #fec_puncture_ff.cc
+    #ber_sink_b_impl.cc
 )
 
-message("${GNURADIO_QTGUI_LIBRARIES}")
-message("${QT_LIBRARIES}")
+#message("${GNURADIO_QTGUI_LIBRARIES}")
+#message("${QT_LIBRARIES}")
 
 target_link_libraries(fec 
     ${Boost_LIBRARIES} 
-    ${VOLK_LIBRARIES}
-    ${QT_LIBRARIES}
-    ${QWT_LIBRARIES}
-    ${GNURADIO_RUNTIME_LIBRARIES}
-    ${GNURADIO_QTGUI_LIBRARIES}
-    ${GNURADIO_FFT_LIBRARIES}
+    #${VOLK_LIBRARIES}
+    #${QT_LIBRARIES}
+    #${QWT_LIBRARIES}
+    #${GNURADIO_RUNTIME_LIBRARIES}
+    #${GNURADIO_QTGUI_LIBRARIES}
+    #${GNURADIO_FFT_LIBRARIES}
     volk_fecapi
 )
 set_target_properties(fec PROPERTIES DEFINE_SYMBOL "fec_EXPORTS")
@@ -82,8 +82,8 @@ install(TARGETS fec
 ########################################################################
 find_package(Boost COMPONENTS unit_test_framework)
 
-include(GrTest)
-set(GR_TEST_TARGET_DEPS fec)
+#include(GrTest)
+#set(GR_TEST_TARGET_DEPS fec)
 #turn each test cpp file into an executable with an int main(t) function
 add_definitions(-DBOOST_TEST_DYN_LINK -DBOOST_TEST_MAIN)
 

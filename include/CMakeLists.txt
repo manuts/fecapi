@@ -26,7 +26,7 @@ install(FILES
     generic_decoder.h
     generic_encoder.h
     fec_decoder.h
-    fec_interleave.h
-    fec_deinterleave.h
+    #fec_interleave.h
+    #fec_deinterleave.h
     DESTINATION include/fec
 )

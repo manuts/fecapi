@@ -101,29 +101,29 @@ endif()
 # Find gnuradio build dependencies
 ########################################################################
 
-set(GR_REQUIRED_COMPONENTS RUNTIME QTGUI FFT)
-find_package(Gnuradio)
-find_package(Volk)
+#set(GR_REQUIRED_COMPONENTS RUNTIME QTGUI FFT)
+#find_package(Gnuradio)
+#find_package(Volk)
 
-find_package(Qt4 4.2.0 COMPONENTS QtCore QtGui)
+#find_package(Qt4 4.2.0 COMPONENTS QtCore QtGui)
 
-find_package(Qwt)
+#find_package(Qwt)
 
-find_package(PythonLibs)
-
-
-
-if(NOT GNURADIO_RUNTIME_FOUND)
-    message(FATAL_ERROR "GnuRadio Runtime required to compile fec")
-endif()
-
-if(NOT VOLK_FOUND)
-    message(FATAL_ERROR "GnuRadio Volk required to compile fec")
-endif()
+#find_package(PythonLibs)
 
 
 
-include(GrSetupQt4)
+#if(NOT GNURADIO_RUNTIME_FOUND)
+#    message(FATAL_ERROR "GnuRadio Runtime required to compile fec")
+#endif()
+
+#if(NOT VOLK_FOUND)
+#    message(FATAL_ERROR "GnuRadio Volk required to compile fec")
+#endif()
+
+
+
+#include(GrSetupQt4)
 
 ########################################################################
 # Setup the include and linker paths
@@ -133,25 +133,25 @@ include_directories(
     ${CMAKE_BINARY_DIR}/volk_fecapi/include
     ${CMAKE_SOURCE_DIR}/volk_fecapi/include
     ${Boost_INCLUDE_DIRS}
-    ${GNURADIO_RUNTIME_INCLUDE_DIRS}
-    ${VOLK_INCLUDE_DIRS}
-    ${PMT_INCLUDE_DIRS}
-    ${QT_INCLUDE_DIRS}
-    ${QWT_INCLUDE_DIRS}
-    ${PYTHON_INCLUDE_DIRS}
-    ${GNURADIO_QTGUI_INCLUDE_DIRS}
-    ${GNURADIO_FFT_INCLUDE_DIRS}
+    #${GNURADIO_RUNTIME_INCLUDE_DIRS}
+    #${VOLK_INCLUDE_DIRS}
+    #${PMT_INCLUDE_DIRS}
+    #${QT_INCLUDE_DIRS}
+    #${QWT_INCLUDE_DIRS}
+    #${PYTHON_INCLUDE_DIRS}
+    #${GNURADIO_QTGUI_INCLUDE_DIRS}
+    #${GNURADIO_FFT_INCLUDE_DIRS}
 )
 
 link_directories(
     ${Boost_LIBRARY_DIRS}
-    ${GNURADIO_RUNTIME_LIBRARY_DIRS}
-    ${VOLK_LIBRARY_DIRS}
-    ${QT_LIBRARY_DIRS}
-    ${QWT_LIBRARY_DIRS}
-    ${PYTHON_LIBRARY_DIRS}
-    ${GNURADIO_QTGUI_LIBRARY_DIRS}
-    ${GNURADIO_FFT_LIBRARY_DIRS}
+    #${GNURADIO_RUNTIME_LIBRARY_DIRS}
+    #${VOLK_LIBRARY_DIRS}
+    #${QT_LIBRARY_DIRS}
+    #${QWT_LIBRARY_DIRS}
+    #${PYTHON_LIBRARY_DIRS}
+    #${GNURADIO_QTGUI_LIBRARY_DIRS}
+    #${GNURADIO_FFT_LIBRARY_DIRS}
 )
 
 
@@ -161,8 +161,8 @@ link_directories(
 ########################################################################
 add_subdirectory(include)
 add_subdirectory(lib)
-add_subdirectory(swig)
-add_subdirectory(python)
-add_subdirectory(grc)
-add_subdirectory(apps)
+#add_subdirectory(swig)
+#add_subdirectory(python)
+#add_subdirectory(grc)
+#add_subdirectory(apps)
 add_subdirectory(volk_fecapi)
