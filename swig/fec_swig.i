@@ -14,6 +14,7 @@ namespace std {
 
 
 // the .i files
+%include <ldpc_encoder_bf.i>
 %include <fec_random_gen_b.i>
 %include <fec_encoder.i>
 %include <fec_gaussnoise_ff.i>

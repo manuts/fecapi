@@ -27,6 +27,7 @@ install(FILES
     gf2vec.h
     gf2mat.h
     xbp.h
+    ldpc_encoder_bf.h
     fec_api.h
     fec_encoder.h
     fec_decoder.h

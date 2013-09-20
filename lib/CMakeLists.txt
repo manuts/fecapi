@@ -32,6 +32,7 @@ add_library(fec SHARED
     gf2mat.cc
     gf2vec.cc
     xbp.cc
+    ldpc_encoder_bf.cc
     libbertools.cc
     fec_random_gen_b.cc
     fec_encoder.cc
