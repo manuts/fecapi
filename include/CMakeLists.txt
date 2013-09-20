@@ -22,6 +22,11 @@
 ########################################################################
 install(FILES
     alist.h
+    awgn_bp.h
+    cldpc.h
+    gf2vec.h
+    gf2mat.h
+    xbp.h
     fec_api.h
     fec_encoder.h
     fec_decoder.h

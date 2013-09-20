@@ -27,6 +27,11 @@ GR_PYTHON_CHECK_MODULE("PyQt4" PyQt4 True PYQT4_FOUND)
 
 add_library(fec SHARED
     alist.cc
+    awgn_bp.cc
+    cldpc.cc
+    gf2mat.cc
+    gf2vec.cc
+    xbp.cc
     libbertools.cc
     fec_random_gen_b.cc
     fec_encoder.cc
