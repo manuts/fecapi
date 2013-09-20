@@ -1,7 +1,7 @@
 /* -*- c++ -*- */
 
 %{
-#include "ldpd_encoder_bf.h"
+#include "ldpc_encoder_bf.h"
 %}
 
 generic_encoder_sptr ldpc_make_encoder_bf(const char * alist_file);

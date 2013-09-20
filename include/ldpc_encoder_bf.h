@@ -26,6 +26,6 @@ class FEC_API ldpc_encoder_bf : public generic_encoder
     int get_input_size();
     ~ldpc_encoder_bf();
 
-}
+};
 
 #endif // INCLUDED_LDPC_ENCODER_BF_H
