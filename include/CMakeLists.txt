@@ -21,6 +21,7 @@
 # Install public header files
 ########################################################################
 install(FILES
+    alist.h
     fec_api.h
     fec_encoder.h
     fec_decoder.h
